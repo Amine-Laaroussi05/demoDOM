@@ -106,3 +106,6 @@ for (let friend of friends) {
     friendList.innerText = `${friend}`;
     ulList.appendChild(friendList);
 }
+
+
+divList.style.margin = "100px 45%";
