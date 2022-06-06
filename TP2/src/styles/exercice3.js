@@ -75,7 +75,7 @@ container.style.padding = "0 400px";
 nav.style.backgroundColor = "grey";
 nav.style.margin = "30px 0";
 nav.style.padding = "10px 0";
-
+nav.style.boxShadow = "inset 10px 10px 5px #2ee69a, inset -10px -10px 5px #2ee69a";
 
 
 

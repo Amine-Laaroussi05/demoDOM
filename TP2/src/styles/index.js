@@ -75,6 +75,7 @@ container.style.padding = "0 400px";
 nav.style.backgroundColor = "grey";
 nav.style.margin = "30px 0";
 nav.style.padding = "10px 0";
+nav.style.boxShadow = "inset 10px 10px 5px #2ee69a, inset -10px -10px 5px #2ee69a";
 
 
 /**
@@ -155,32 +156,50 @@ a1Col4.appendChild(buttonCol4);
  */
 divColonnes.style.display = "flex";
 divColonnes.style.justifyContent = "space-around";
+divColonnes.style.flexFlow = "row wrap";
 divColonnes.style.margin = "150px 0";
 
+// Tableau colonnes & paragraphes
+divColonnesTableau = [divColonne1, divColonne2, divColonne3, divColonne4];
+paragraphesTableau = [parColonne1, parColonne2, parColonne3, parColonne4];
 
-// Colonne 1
-divColonne1.style.textAlign = "center";
-divColonne1.style.border = "solid 1px blue";
-divColonne1.style.margin = "10px";
-divColonne1.style.backgroundColor = "#2ee69a";
+// Style pour les colonnes 
+for (let colonne of divColonnesTableau) {
+    colonne.style.display = "flex";
+    colonne.style.flexFlow = "column wrap";
+    colonne.style.alignItems = "center";
+    colonne.style.justifyContent = "space-between";
+    colonne.style.border = "solid 1px blue";
+    colonne.style.margin = "10px";
+    colonne.style.backgroundColor = "#2ee69a";
+    colonne.style.boxShadow = "7px 7px #888888";
+    colonne.style.width = "400px";
+    colonne.style.height = "200px";
+    colonne.style.textAlign = "center";
+
+}
 
 
-// Colonne 2
-divColonne2.style.textAlign = "center";
-divColonne2.style.border = "solid 1px blue";
-divColonne2.style.margin = "10px";
-divColonne2.style.backgroundColor = "#2ee69a";
+for (let paragraphe of paragraphesTableau) {
+    paragraphe.style.margin = "0 20px";
+}
 
 
-// Colonne 3
-divColonne3.style.textAlign = "center";
-divColonne3.style.border = "solid 1px blue";
-divColonne3.style.margin = "10px";
-divColonne3.style.backgroundColor = "#2ee69a";
 
 
-// Colonne 4
-divColonne4.style.textAlign = "center";
-divColonne4.style.border = "solid 1px blue";
-divColonne4.style.margin = "10px";
-divColonne4.style.backgroundColor = "#2ee69a";
+
+
+
+
+/**
+ * Script hover pour les colonnes
+ */
+
+for (let colonne of divColonnesTableau) {
+    colonne.onmouseover = function() {
+        colonne.style.backgroundColor = "#1ed488";
+    }
+    colonne.onmouseleave = function() {
+        colonne.style.backgroundColor = "#2ee69a";
+    }
+}
